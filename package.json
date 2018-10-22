@@ -1,0 +1,22 @@
+{
+  "name": "num-words",
+  "version": "1.0.0",
+  "description": "Convert digits to words",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test.js"
+  },
+  "keywords": [
+    "digit",
+    "convert",
+    "word",
+    "number",
+    "amount"
+  ],
+  "author": "salmanmitha@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "standard": "^12.0.1",
+    "tap": "^12.0.1"
+  }
+}
