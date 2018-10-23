@@ -13,6 +13,10 @@
     "number",
     "amount"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/salmanm/num-words.git"
+  },
   "author": "salmanmitha@gmail.com",
   "license": "MIT",
   "devDependencies": {
