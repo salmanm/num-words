@@ -66,8 +66,5 @@ typings/
 # vim swap files
 *.swp
 
-# npm package lock
-package-lock.json
-
 # VSCode settigns directoryg
 .vscode
