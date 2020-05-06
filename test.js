@@ -1,6 +1,10 @@
-const { test } = require('tap')
+const { test, only } = require('tap')
 
 const numWords = require('.')
+
+only('test playground', (t) => {
+  t.end()
+})
 
 test('Should convert numbers to words correctly', (t) => {
   const assertNum = (num, words) => {
@@ -109,6 +113,8 @@ test('Should convert numbers to words correctly', (t) => {
   assertNum('bad', '')
   assertNum('12x', '')
   assertNum(1e3, 'one thousand')
+
+  t.throws(() => numWords(1e9))
 
   t.end()
 })
