@@ -5,13 +5,17 @@ const b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'ei
 
 const regex = /^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/
 
-module.exports = function numWords (num) {
-  if ((num = num.toString()).length > 9) {
+module.exports = function numWords (input) {
+  const num = Number(input)
+  if (isNaN(num)) return ''
+
+  const numStr = num.toString()
+  if (numStr.length > 9) {
     throw new Error('overflow') // Does not support converting more than 9 digits yet
   }
 
-  const n = ('000000000' + num).substr(-9).match(regex)
-  if (!n) return
+  const n = ('000000000' + numStr).substr(-9).match(regex) // left pad zeros
+  if (!n) return ''
 
   let str = ''
   str += (n[1] != 0) ? (a[Number(n[1])] || b[n[1][0]] + ' ' + a[n[1][1]]) + 'crore ' : ''

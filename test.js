@@ -106,5 +106,9 @@ test('Should convert numbers to words correctly', (t) => {
   assertNum('0123456', 'one lakh twenty three thousand four hundred and fifty six')
   assertNum('012345678', 'one crore twenty three lakh forty five thousand six hundred and seventy eight')
 
+  assertNum('bad', '')
+  assertNum('12x', '')
+  assertNum(1e3, 'one thousand')
+
   t.end()
 })
