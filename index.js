@@ -8,6 +8,7 @@ const regex = /^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/
 module.exports = function numWords (input) {
   const num = Number(input)
   if (isNaN(num)) return ''
+  if (num === 0) return 'zero'
 
   const numStr = num.toString()
   if (numStr.length > 9) {

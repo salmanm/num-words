@@ -97,8 +97,8 @@ test('Should convert numbers to words correctly', (t) => {
   assertNum(90123456, 'nine crore one lakh twenty three thousand four hundred and fifty six')
   assertNum(901234567, 'ninety crore twelve lakh thirty four thousand five hundred and sixty seven')
 
-  // assertNum(0, 'zero')
-  // assertNum('0', 'zero') // TODO: fix
+  assertNum(0, 'zero')
+  assertNum('0', 'zero')
   assertNum('012', 'twelve')
   assertNum('0123', 'one hundred and twenty three')
   assertNum('01234', 'one thousand two hundred and thirty four')
