@@ -27,6 +27,8 @@ test('Should convert numbers to words correctly', (t) => {
   assertNum(23456789, 'two crore thirty four lakh fifty six thousand seven hundred and eighty nine')
   assertNum(234567890, 'twenty three crore forty five lakh sixty seven thousand eight hundred and ninety')
 
+  assertNum(3, 'three')
+
   // add more
 
   t.end()
