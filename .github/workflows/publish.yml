@@ -1,4 +1,4 @@
-name: num-words
+name: Publish
 
 on:
   release:

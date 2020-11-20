@@ -1,0 +1,16 @@
+name: Manual
+
+on:
+  workflow_dispatch:
+    inputs:
+      inputA:
+        description: 'Input A'
+        required: true
+        default: 'empty'
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Input A: ${{ github.event.inputs.inputA }}"
