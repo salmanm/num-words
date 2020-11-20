@@ -6,7 +6,7 @@ const b = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'ei
 const regex = /^(\d{2})(\d{2})(\d{2})(\d{1})(\d{2})$/
 
 const getLT20 = (n) => a[Number(n)]
-const get20Plus = (n) => b[n[0]] + ' ' + a[n[1]]
+const getGT20 = (n) => b[n[0]] + ' ' + a[n[1]]
 
 module.exports = function numWords (input) {
   const num = Number(input)
@@ -21,12 +21,12 @@ module.exports = function numWords (input) {
   const [, n1, n2, n3, n4, n5] = ('000000000' + numStr).substr(-9).match(regex) // left pad zeros
 
   let str = ''
-  str += n1 != 0 ? (getLT20(n1) || get20Plus(n1)) + 'crore ' : ''
-  str += n2 != 0 ? (getLT20(n2) || get20Plus(n2)) + 'lakh ' : ''
-  str += n3 != 0 ? (getLT20(n3) || get20Plus(n3)) + 'thousand ' : ''
+  str += n1 != 0 ? (getLT20(n1) || getGT20(n1)) + 'crore ' : ''
+  str += n2 != 0 ? (getLT20(n2) || getGT20(n2)) + 'lakh ' : ''
+  str += n3 != 0 ? (getLT20(n3) || getGT20(n3)) + 'thousand ' : ''
   str += n4 != 0 ? getLT20(n4) + 'hundred ' : ''
   str += n5 != 0 && str != '' ? 'and ' : ''
-  str += n5 != 0 ? (getLT20(n5) || get20Plus(n5)) : ''
+  str += n5 != 0 ? (getLT20(n5) || getGT20(n5)) : ''
 
   return str.trim()
 }

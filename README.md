@@ -1,16 +1,16 @@
 # num-words
 
-An simple module to convert numbers to words for South Asian numbering system. e.g. Two crore four lakh
+An simple module to convert numbers to words for South Asian numbering system. e.g. Two crore four lakh.
 
 # Install
 
-```javascript
+```js
 npm i num-words
 ```
 
 # Example
 
-```javascript
+```js
 1          ->  one
 12         ->  twelve
 123        ->  one hundred and twenty three
@@ -21,7 +21,7 @@ npm i num-words
 
 # Usage
 
-```javascript
+```js
 const numWords = require('num-words')
 
 const amountInWords = numWords(12345) // twelve thousand three hundred and forty five
