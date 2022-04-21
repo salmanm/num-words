@@ -20,7 +20,7 @@
   "author": "salmanmitha@gmail.com",
   "license": "MIT",
   "devDependencies": {
-    "standard": "^16.0.3",
+    "standard": "^17.0.0",
     "tap": "^14.10.7"
   }
 }
